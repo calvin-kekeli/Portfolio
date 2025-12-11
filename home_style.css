@@ -1088,14 +1088,14 @@ nav a:hover::after {
         opacity: 0;
     }
     10% {
-        opacity: 0.3;
+        opacity: 0.4;
     }
     50% {
         transform: translateY(-80vh) translateX(30px) rotate(180deg);
-        opacity: 0.2;
+        opacity: 0.3;
     }
     90% {
-        opacity: 0.3;
+        opacity: 0.4;
     }
     100% {
         transform: translateY(-100vh) translateX(50px) rotate(360deg);
@@ -1151,4 +1151,3 @@ footer p {
     color: #a0a0a0;
     font-size: 0.9rem;
 }
-

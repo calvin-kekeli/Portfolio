@@ -1110,3 +1110,294 @@ footer p {
         padding: 0.8rem;
     }
 }
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 255, 157, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff9d, #00b8ff);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 5% 2rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1200px;
+    z-index: 2;
+    text-align: center;
+}
+
+.glitch {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #00ff9d, #00b8ff, #7000ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #a0a0a0;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem auto;
+    max-width: 900px;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(0, 255, 157, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 255, 157, 0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+    border-color: rgba(0, 255, 157, 0.6);
+    box-shadow: 0 15px 50px rgba(0, 255, 157, 0.5);
+}
+
+.intro-text {
+    text-align: left;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d0d0d0;
+    margin-bottom: 1rem;
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    margin: 2rem 0.5rem;
+    background: linear-gradient(135deg, #00ff9d, #00b8ff);
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(0, 255, 157, 0.4);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #00ff9d;
+    border: 2px solid #00ff9d;
+}
+
+.cta-button.secondary:hover {
+    background: rgba(0, 255, 157, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 255, 157, 0.2);
+}
+
+/* Animated Background */
+.bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bg-animation::before,
+.bg-animation::after {
+    content: '🔒';
+    position: absolute;
+    font-size: 30px;
+    opacity: 0;
+    animation: floatIcon 20s infinite ease-in-out;
+}
+
+.bg-animation::before {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.bg-animation::after {
+    content: '🛡️';
+    left: 80%;
+    animation-delay: 5s;
+}
+
+/* Floating cybersecurity icons */
+.floating-icon {
+    position: absolute;
+    display: block;
+    color: #00ff9d;
+    opacity: 0;
+    animation: floatIcon 20s infinite ease-in-out;
+    pointer-events: none;
+}
+
+.floating-icon svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 157, 0.5));
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-80vh) translateX(30px) rotate(180deg);
+        opacity: 0.2;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glitch {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(10, 10, 10, 0.8);
+    border-top: 1px solid rgba(0, 255, 157, 0.1);
+}
+
+footer p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}

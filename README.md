@@ -352,8 +352,8 @@ Found a bug? Have a cool idea? Want to add a feature?
 
 ### Connect With Me
 - 🔗 **Portfolio**: [Coming Soon - Deploy This First!]
-- 💼 **LinkedIn**: [Calvin Yaadar]
-- 🐙 **GitHub**: [@calvin-kekeli]
+- 💼 **LinkedIn**: [https://linkedin.com/in/calvin-yaadar/]
+- 🐙 **GitHub**: [https://www.github.com/calvin-kekeli/]
 - 🐦 **Twitter/X**: [@calvin__keyz]
 - 📧 **Email**: calvinyaadar@gmail.com
 

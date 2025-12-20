@@ -2,7 +2,7 @@
 
 > **Securing Digital Futures** - Where Cybersecurity Meets Creative Excellence
 
-Welcome to my digital space! This isn't just another portfolio—it's a showcase of passion, skill, and innovation in the cybersecurity and digital creativity realm. Buckle up and explore! 🚀
+Welcome to my digital space! This isn't just another portfolio, it's a showcase of passion, skill, and innovation in the cybersecurity and digital creativity realm. Buckle up and explore! 🚀
 
 ## ✨ What Makes This Portfolio Special?
 
